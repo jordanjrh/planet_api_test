@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  planet_name: MyString
+  planet_mass: 1.5
+  rotation_period: 1.5
+  day_length: 1.5
+  orbital_period: 1.5
+  distance_from_sun: 1.5
+  mean_temperature: 1.5
+  number_of_moons: 1
+
+two:
+  planet_name: MyString
+  planet_mass: 1.5
+  rotation_period: 1.5
+  day_length: 1.5
+  orbital_period: 1.5
+  distance_from_sun: 1.5
+  mean_temperature: 1.5
+  number_of_moons: 1

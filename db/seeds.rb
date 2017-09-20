@@ -6,20 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-csv_text_planet = File.read(Rails.root.join('lib', 'seeds', 'milkway_planet_table.csv'))
-csv_planet = CSV.parse(csv_text_planet, :headers => true, :encoding => 'ISO-8859-1')
+require 'csv'
 
-csv_planet.each do |row|
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'planet_table.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+
+csv.each do |row|
    t = Planet.new
-   if row['catchphrase']
-     t.planet = row['planet_name']
-     t.mass = row['planet_mass']
-     t.rotation = row['roation_period']
-     t.length = row['day_length']
-     t.orbit = row['orbital_period']
-     t.distance = row['distance_from_sun']
-     t.temperature = row['mean_temperature']
-     t.moons = row['number_of_moons']
+     t.planet_name = row['planet_name']
+     t.planet_mass = row['planet_mass']
+     t.rotation_period = row['rotation_period']
+     t.day_length = row['day_length']
+     t.orbital_period = row['orbital_period']
+     t.distance_from_sun = row['distance_from_sun']
+     t.mean_temperature = row['mean_temperature']
+     t.number_of_moons = row['number_of_moons']
+     puts "#{t.planet_name}, #{t.number_of_moons} saved"
      t.save
-   end
- end
+end
+puts "There are now #{Planet.count} rows in the transactions table"
