@@ -1,0 +1,9 @@
+planet_name,planet_mass,rotation_period,day_length,orbital_period,distance_from_sun,mean_temperature,number_of_moons
+Mercury,0.33,1407.6,4222.6,57.9,88,167,0
+Venus,4.87,-5832.5,2802,108.2,224.7,464,0
+Earth,5.97,23.9,24,149.6,365.2,15,1
+Mars,0.642,24.6,24.7,227.9,687,-65,2
+Jupiter,1898,9.9,9.9,778.6,4331,-110,67
+Saturn,568,10.7,10.7,1433.5,10747,-140,62
+Uranus,86.8,-17.2,17.2,2872.5,30589,-195,27
+Neptune,102,16.1,16.1,4495.1,59800,-200,14
